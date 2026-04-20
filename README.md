@@ -7,9 +7,9 @@
   <p><strong>the polite sudo</strong></p>
 
   <p>
-    <a href="https://github.com/iamrajjoshi/pls/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/iamrajjoshi/pls/ci.yml?branch=main&label=ci"></a>
-    <a href="https://github.com/iamrajjoshi/pls/releases"><img alt="Release" src="https://img.shields.io/github/v/release/iamrajjoshi/pls?display_name=tag"></a>
-    <a href="https://crates.io/crates/please-cli"><img alt="crates.io" src="https://img.shields.io/crates/v/please-cli.svg"></a>
+    <a href="https://github.com/iamrajjoshi/pretty-please/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/iamrajjoshi/pretty-please/ci.yml?branch=main&label=ci"></a>
+    <a href="https://github.com/iamrajjoshi/pretty-please/releases"><img alt="Release" src="https://img.shields.io/github/v/release/iamrajjoshi/pretty-please?display_name=tag"></a>
+    <a href="https://crates.io/crates/pretty-please"><img alt="crates.io" src="https://img.shields.io/crates/v/pretty-please.svg"></a>
     <a href="LICENSE-MIT"><img alt="License" src="https://img.shields.io/badge/license-MIT%20or%20Apache--2.0-blue"></a>
   </p>
 </div>
@@ -21,22 +21,22 @@
 ## Install
 
 ```bash
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/iamrajjoshi/pls/releases/latest/download/please-cli-installer.sh | sh
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/iamrajjoshi/pretty-please/releases/latest/download/pretty-please-installer.sh | sh
 ```
 
 Windows PowerShell:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -c "irm https://github.com/iamrajjoshi/pls/releases/latest/download/please-cli-installer.ps1 | iex"
+powershell -ExecutionPolicy Bypass -c "irm https://github.com/iamrajjoshi/pretty-please/releases/latest/download/pretty-please-installer.ps1 | iex"
 ```
 
 | Method | Command | Status |
 | --- | --- | --- |
 | Homebrew | `brew install iamrajjoshi/tap/pls` | wired through `cargo-dist` |
-| Cargo | `cargo install please-cli --bin pls` | available |
+| Cargo | `cargo install pretty-please --bin pls` | available |
 | Shell installer | `curl ... | sh` | generated on release |
 | PowerShell installer | `irm ... \| iex` | generated on release |
-| Nix | `nix run github:iamrajjoshi/pls` | included via `flake.nix` |
+| Nix | `nix run github:iamrajjoshi/pretty-please` | included via `flake.nix` |
 | AUR | `yay -S pls-git` | included as `packaging/aur/PKGBUILD` |
 | Scoop | community manifest welcome | not automated yet |
 
@@ -145,8 +145,8 @@ Mostly the same way a manual `sudo <previous command>` does: `sudo` only applies
 **Why not just alias `sudo !!`?**  
 Because `!!` is not portable, history access differs wildly between shells, and distributing a tested cross-shell tool is nicer than copy-pasting five different dotfile snippets.
 
-**Why is the crate called `please-cli` if the binary is `pls`?**  
-Because both `pls` and `please` are already taken on crates.io. The published package name stays releaseable while the installed binary remains `pls`.
+**Why is the crate called `pretty-please` if the binary is `pls`?**  
+Because `pls` is already taken on crates.io, while `pretty-please` stays publishable and still lets the installed command remain `pls`.
 
 ## Development
 

@@ -3,7 +3,7 @@ pkgver=0.1.0
 pkgrel=1
 pkgdesc="The polite sudo"
 arch=('x86_64' 'aarch64')
-url="https://github.com/iamrajjoshi/pls"
+url="https://github.com/iamrajjoshi/pretty-please"
 license=('MIT' 'Apache')
 depends=('sudo')
 makedepends=('cargo' 'git')
@@ -11,22 +11,22 @@ source=("git+$url.git")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd "$srcdir/pls"
+  cd "$srcdir/pretty-please"
   printf "%s" "$(git describe --tags --always | sed 's/^v//; s/-/./g')"
 }
 
 build() {
-  cd "$srcdir/pls"
+  cd "$srcdir/pretty-please"
   cargo build --locked --release --bin pls
 }
 
 check() {
-  cd "$srcdir/pls"
+  cd "$srcdir/pretty-please"
   cargo test --locked
 }
 
 package() {
-  cd "$srcdir/pls"
+  cd "$srcdir/pretty-please"
   install -Dm755 "target/release/pls" "$pkgdir/usr/bin/pls"
   install -Dm644 README.md "$pkgdir/usr/share/doc/pls/README.md"
   install -Dm644 LICENSE-MIT "$pkgdir/usr/share/licenses/pls/LICENSE-MIT"

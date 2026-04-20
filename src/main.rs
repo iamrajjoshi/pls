@@ -1,7 +1,7 @@
 use anyhow::Result;
 use clap::Parser;
 use owo_colors::OwoColorize;
-use please_cli::cli::{Cli, CliAction};
+use pretty_please::cli::{Cli, CliAction};
 
 fn main() {
     if let Err(error) = run() {
@@ -22,6 +22,6 @@ fn run() -> Result<()> {
             shell.write_completions()?;
             Ok(())
         }
-        CliAction::Exec(input) => please_cli::exec::run(input),
+        CliAction::Exec(input) => pretty_please::exec::run(input),
     }
 }

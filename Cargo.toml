@@ -1,13 +1,13 @@
 [package]
-name = "please-cli"
+name = "pretty-please"
 version = "0.1.0"
 edition = "2024"
 authors = ["Raj Joshi"]
 rust-version = "1.85"
 description = "The polite sudo."
-homepage = "https://github.com/iamrajjoshi/pls"
-repository = "https://github.com/iamrajjoshi/pls"
-documentation = "https://docs.rs/please-cli"
+homepage = "https://github.com/iamrajjoshi/pretty-please"
+repository = "https://github.com/iamrajjoshi/pretty-please"
+documentation = "https://docs.rs/pretty-please"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 keywords = ["cli", "sudo", "shell", "productivity"]

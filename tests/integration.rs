@@ -1,9 +1,9 @@
 use std::path::PathBuf;
 
-use please_cli::cli::CommandInput;
-use please_cli::error::PleaseError;
-use please_cli::exec::{Runtime, plan};
-use please_cli::shell::Shell;
+use pretty_please::cli::CommandInput;
+use pretty_please::error::PleaseError;
+use pretty_please::exec::{Runtime, plan};
+use pretty_please::shell::Shell;
 
 fn runtime(is_root: bool, sudo_path: Option<&str>) -> Runtime {
     Runtime {

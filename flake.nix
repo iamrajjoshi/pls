@@ -1,5 +1,5 @@
 {
-  description = "pls - the polite sudo";
+  description = "pretty-please - the polite sudo";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
